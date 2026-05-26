@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>folder</icon>
+	<name>Organize with Folder Manager</name>
+	<submenu></submenu>
+	<unique-id>folder-manager-organize</unique-id>
+	<command>python3 /workspace/thunar_plugin/thunar-folder-manager.py %f</command>
+	<description>Open Folder Structure Manager to organize files in the selected folder</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>document</icon>
+	<name>Organize Files Here</name>
+	<submenu></submenu>
+	<unique-id>folder-manager-organize-here</unique-id>
+	<command>python3 /workspace/thunar_plugin/thunar-folder-manager.py %F</command>
+	<description>Organize selected files using Folder Structure Manager</description>
+	<range></range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+</actions>
