@@ -605,7 +605,12 @@ class FolderManagerGUI:
         self.target_path: Optional[Path] = None
         self.selected_node_id: Optional[str] = None
         
-        # Visualization settings
+        # Initialize root window first (required for BooleanVar in Python 3.13+)
+        self.root = tk.Tk()
+        self.root.title("Folder Structure Manager - Mind Map Organizer")
+        self.root.geometry("1400x900")
+        
+        # Visualization settings (must be created after root window)
         self.show_file_count = tk.BooleanVar(value=True)
         self.show_file_types = tk.BooleanVar(value=True)
         self.show_comments = tk.BooleanVar(value=True)
@@ -615,9 +620,7 @@ class FolderManagerGUI:
     
     def setup_gui(self):
         """Setup the main GUI window"""
-        self.root = tk.Tk()
-        self.root.title("Folder Structure Manager - Mind Map Organizer")
-        self.root.geometry("1400x900")
+        # Root window already created in __init__ (required for Python 3.13+)
         
         # Configure style
         style = ttk.Style()
